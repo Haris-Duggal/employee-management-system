@@ -1,0 +1,24 @@
+ul {
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+}
+li {
+  padding: 15px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(0, 174, 255);
+}
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+}
+.navbar {
+  background-color: black;
+  padding: 0 50px;
+  color: white;
+}

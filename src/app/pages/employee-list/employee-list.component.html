@@ -1,0 +1,35 @@
+<div class="mb-4 d-flex justify-content-between align-items-center">
+  <button type="button" routerLink="" class="btn btn-danger">Go Back</button>
+  <button type="button" routerLink="/add-edit-employee" class="btn btn-primary">
+    Add Employee
+  </button>
+</div>
+
+<div class="d-flex flex-column gap-3">
+  @for (Employee of employees; track $index) {
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fw-bold text-success">Name: {{ Employee.name }}</h2>
+      <h5 class="card-title">Position: {{ Employee.position }}</h5>
+      <p class="card-text">Department: {{ Employee.department }}</p>
+      <p class="card-text">Salary: {{ Employee.salary }}</p>
+      <div class="d-flex gap-2">
+        <button
+          class="btn btn-sm btn-success"
+          (click)="editEmployee(Employee.key!)"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-sm btn-danger"
+          (click)="removeEmployee(Employee.key!)"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+
+<router-outlet></router-outlet>
